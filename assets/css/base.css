@@ -1,0 +1,10 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("../img/puntoMedio.jpg");
+    background-repeat: repeat-y;
+    background-position: center;
+}
+#consola{
+
+}

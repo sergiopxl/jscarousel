@@ -1,0 +1,137 @@
+.djv-carousel {
+    width: 100vw;
+    background-color: #eee;
+    position: relative;
+    margin-top: 10vh;
+}
+
+.djv-carousel .djv-carousel-visor {
+    height: 40vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.djv-carousel .djv-carousel-visor .djv-carousel-container {
+    position: relative;
+    height: 40vh;
+}
+
+.djv-carousel .djv-carousel-visor .djv-carousel-container .djv-carousel-element {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    height: 40vh;
+    max-width: 100vw;
+    float: left;
+    overflow: hidden;
+}
+
+.djv-carousel .djv-carousel-visor .djv-carousel-container .djv-carousel-element .djv-carousel-element-media {
+    width: 100%;
+    height: 40vh;
+}
+
+.djv-carousel .djv-carousel-visor .djv-carousel-container .djv-carousel-element .djv-carousel-element-media img {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+}
+
+.djv-carousel [class*='djv-carousel-handler-'] {
+    position: relative;
+    background-color: rgba(200, 120, 130, .5);
+    height: 40vh;
+    top: -40vh;
+    width: 10%;
+    cursor: pointer;
+}
+
+.djv-carousel [class*='djv-carousel-handler-'] .djv-carousel-handler-icon {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 40px;
+    background-color: rgba(255, 100, 80, 0.9);
+    display: block;
+}
+
+.djv-carousel .djv-carousel-handler-left {
+    float: left;
+}
+
+.djv-carousel .djv-carousel-handler-right {
+    float: right;
+}
+
+.djv-carousel .djv-carousel-indicators {
+    background-color: red;
+    height: 20px;
+    position: relative;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+.djv-carousel .djv-carousel-indicators .djv-carousel-indicator-n{
+    height: 20px;
+    background-color: blue;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    text-align: center;
+    color:white;
+}
+#segundaconsola{
+    background-color: #aa5;
+}
+
+@media (max-width:768px) {
+    .djv-carousel{
+        height: 30vh;
+    }
+    .djv-carousel .djv-carousel-visor {
+        height: 30vh;
+    }
+    .djv-carousel .djv-carousel-visor .djv-carousel-container {
+        height: 30vh;
+    }
+    .djv-carousel .djv-carousel-visor .djv-carousel-container .djv-carousel-element {
+        display: inline-block;
+        width: 100%;
+        position: relative;
+        height: 30vh;
+    }
+    .djv-carousel .djv-carousel-visor .djv-carousel-container .djv-carousel-element .djv-carousel-element-media img {
+        width: calc(100% + 600px);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+    }
+    .djv-carousel [class*='djv-carousel-handler-'] {
+        height: 30vh;
+        top: -30vh;
+    }
+    .djv-carousel .djv-carousel-indicators {
+        background-color: transparent;
+        bottom: 30px;
+    }
+    .djv-carousel .djv-carousel-indicators .djv-carousel-indicator-n{
+        height: 10px;
+        background-color: rgba(255,255,255,0.5);
+        border:1px solid white;
+        border-radius: 30px;
+        width: 10px;
+    }
+    .djv-carousel .djv-carousel-indicators .djv-carousel-indicator-n span{
+        display: none;
+    }
+}

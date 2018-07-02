@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>djv-Carousel 1.0</title>
+	<meta charset="utf-8">
+	<link href="assets/css/djv-carousel.css"  rel="stylesheet">
+	<link href="assets/css/base.css"  rel="stylesheet">
+	<script src="js/djv-carousel.js"></script>
+</head>
+
+<body>
+	<div id="djv-carousel" class="djv-carousel">
+		<div class="djv-carousel-visor">
+			<div class="djv-carousel-container">
+				<div id="element-1" class="djv-carousel-element">
+					<div class="djv-carousel-element-media">
+						<picture>
+							<source src="assets/img/sliderwebp1.webp">
+							<img src="assets/img/slider1.jpg" alt="Texto alternativo 01">
+						</picture>
+					</div>
+					<div class="djv-carousel-element-caption">
+						<div class="djv-carousel-element-caption-title">
+							Titular 01
+						</div>
+						<p class="djv-carousel-element-parraf">
+							Un carousel debe ser responsive para que se vea en
+							todos los dispositivos.
+						</p>
+						<a class="djv-carousel-element-link" href="#">
+							Link 01
+						</a>
+					</div>
+				</div>
+				<div id="element-2" class="djv-carousel-element">
+					<div class="djv-carousel-element-media">
+						<picture>
+							<source src="assets/img/sliderwebp2.webp">
+							<img src="assets/img/slider2.jpg" alt="Texto alternativo 02">
+						</picture>
+					</div>
+					<div class="djv-carousel-caption">
+						<div class="djv-carousel-element-caption-title">
+							Titular 02
+						</div>
+						<p class="djv-carousel-element-parraf">
+							El carousel ha de ser configurable con parametros de
+							inicialización en javaScript.
+						</p>
+						<a class="djv-carousel-element-link" href="#">
+							Link 02
+						</a>
+					</div>
+				</div>
+				<div id="element-3" class="djv-carousel-element">
+					<div class="djv-carousel-element-media">
+						<picture>
+							<source src="assets/img/sliderwebp3.webp">
+							<img src="assets/img/slider3.jpg" alt="Texto alternativo 03">
+						</picture>
+					</div>
+					<div class="djv-carousel-caption">
+						<div class="djv-carousel-element-caption-title">
+							Titular 02
+						</div>
+						<p class="djv-carousel-element-parraf">
+							El estilo ha de ir en un archivo CSS que no contenga
+							estilos para etiquetas HTML solo clases CSS.
+							Aunque las etiquetas HTML esten definidas en la demo
+							el funcionamiento depende del etiquetado CSS.
+						</p>
+						<a class="djv-carousel-element-link" href="#">
+							Link 03
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<a class="djv-carousel-handler-left"><span class="djv-carousel-handler-icon"></span></a>
+		<a class="djv-carousel-handler-right"><span class="djv-carousel-handler-icon"></span></a>
+		<div class="djv-carousel-indicators">
+			<div class="djv-carousel-indicator-n"><span>a</span></div>
+			<div class="djv-carousel-indicator-n"><span>b</span></div>
+			<div class="djv-carousel-indicator-n"><span>c</span></div>
+		</div>
+	</div>
+	<!-- Solo para depurar -->
+	<div id="consola"></div>
+	<div id="segundaconsola"></div>
+	<script>
+			//alert("hola");
+			var miSlide = new djvCarousel();
+			miSlide.djvCarouselInit("djv-carousel",5000);
+
+			document.getElementsByTagName("BODY")[0].onresize = function() {
+				miSlide.djvCarouselInit("djv-carousel",5000);
+			};
+			miSlide.djvCarouselMove();
+			
+			//var djvEventClick=miSlide.djvCarouselVisor;
+			//console.log(djvEventClick);
+			//miSlide.djvCarouselVisor.onmouseover=function(){miSlide.djvCarouselStop()};
+			//miSlide.djvCarouselVisor.onmouseleave = function(){miSlide.djvCarouselMove()};
+	</script>
+</body>
+
+</html>
